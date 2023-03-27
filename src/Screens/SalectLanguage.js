@@ -1,5 +1,5 @@
 //import liraries
-import {View, Text, FlatList, StyleSheet, Pressable} from 'react-native';
+import {View,TouchableOpacity, Text, FlatList, StyleSheet, Pressable} from 'react-native';
 import React, {useState} from 'react';
 import '../language/i18n';
 import {useTranslation} from 'react-i18next';
@@ -16,7 +16,7 @@ const SalectLanguage = ({navigation}) => {
       .catch(err => console.log(err));
   };
 
-  const DATA = [
+  const data = [
     {text: 'English', type: 'en'},
     {text: 'हिंदी', type: 'hi'},
     {text: 'عربي', type: 'ar'},
@@ -24,7 +24,7 @@ const SalectLanguage = ({navigation}) => {
 
   const renderItem = ({item}) => {
     return (
-      <Pressable
+      <TouchableOpacity
         style={
           currentLanguage === item.type ? styles.selected : styles.unselected
         }
@@ -38,7 +38,7 @@ const SalectLanguage = ({navigation}) => {
           ]}>
           {item.text}
         </Text>
-      </Pressable>
+      </TouchableOpacity>
     );
   };
 
@@ -50,11 +50,13 @@ const SalectLanguage = ({navigation}) => {
         paddingHorizontal: 20,
       }}>
       <Text style={styles.SalectLanguage}>{t('SalectLanguage')}</Text>
-      <FlatList
-        contentContainerStyle={styles.flatList}
-        data={DATA}
-        renderItem={renderItem}
-      />
+      <View style={{flex:1}}>
+        <FlatList
+          contentContainerStyle={styles.flatList}
+          data={data}
+          renderItem={renderItem}
+        />
+      </View>
       <ButtonComp
         onPress={() => navigation.navigate(navgiationStrings.LOGIN)}
         btnText={'Login'}

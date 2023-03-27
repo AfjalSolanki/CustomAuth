@@ -25,7 +25,39 @@ const styles = StyleSheet.create({
         height: moderateScale(56),
         borderRadius: moderateScale(56 / 2),
         alignSelf: 'flex-end'
-    }
+    },
+
+      // scrollViewContainer: {
+  //   paddingBottom: wp(3),
+  //   alignSelf: 'center',
+  //   width: wp(100),
+  //   paddingHorizontal: wp(5),
+  // },
+  // logoImage: {
+  //   width: wp(56),
+  //   height: hp(10),
+  //   alignSelf: 'center',
+  //   resizeMode: 'contain',
+  //   marginVertical: hp(2.5),
+  // },
+  // inputStyles: {
+  //   marginTop: hp(2),
+  // },
+  // loginView: {
+  //   marginVertical: hp(2.5),
+  //   flexDirection: 'row',
+  //   justifyContent: 'center',
+  // },
+  // logiStyle: {
+  //   color: COLORS.lightBlack,
+  //   fontFamily: Font.mediam,
+  //   fontSize: SIZE.NL,
+  // },
+  // signUpText: {
+  //   color: COLORS.purple,
+  //   fontFamily: Font.semiBold,
+  //   fontSize: SIZE.NL,
+  // },
 
 });
 
